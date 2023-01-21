@@ -52,46 +52,8 @@ p.error {
     margin-bottom: 0
 }
 
-tr.tableRow[data-v-555af8ce] {
-    background-color: hsla(0,0%,97.6%,.8);
-    vertical-align: middle
-}
-
-tr.expandRow td>div[data-v-555af8ce] {
-    overflow: hidden;
-    transition: max-height .5s ease;
-    max-height: 4em
-}
-
-tr.expandRow td>div.collapsed[data-v-555af8ce] {
-    max-height: 0
-}
-
-div.progress[data-v-555af8ce] {
-    display: inline-block;
-    overflow: hidden;
-    height: 25px;
-    width: 50px;
-    border-radius: 6px;
-    margin-bottom: 0!important
-}
-
-div.progress div.bar[data-v-555af8ce] {
-    height: 25px;
-    border-radius: 6px;
-    font-size: .9rem;
-    line-height: 25px;
-    color: #fff
-}
-
-tr td[data-v-555af8ce] {
-    color: #616366;
-    font-weight: 700;
-    border: none!important;
-    white-space: nowrap
-}
-
 #table {
+    display: block;
     font-size: 1rem;
     border: none;
     text-align: center;
@@ -107,39 +69,6 @@ tr td[data-v-555af8ce] {
     margin-bottom: -15px;
     margin-left: 5px
 }
-
-div.card[data-v-cf75da64] {
-    padding: 24px;
-    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
-    border-radius: .5rem;
-    background-color: hsla(0,0%,100%,.8)
-}
-
-div.card div.card-header span[data-v-cf75da64] {
-    font-size: 1.25rem;
-    font-weight: 400;
-    vertical-align: middle
-}
-
-div.card div.card-header p[data-v-cf75da64] {
-    color: #919699
-}
-
-div.card div.card-content p[data-v-cf75da64] {
-    margin-bottom: 0
-}
-
-div.card div.progress[data-v-cf75da64] {
-    margin: 1.2em 0
-}
-
-.flag-icon[data-v-cf75da64] {
-    display: inline;
-    vertical-align: middle;
-    width: 70px;
-    margin-right: 8px
-}
-
 #cards {
     padding-top: 3.4rem;
     padding-bottom: 3.5rem
@@ -192,20 +121,65 @@ div.bar {
 }
 
 @media only screen and (max-width: 1075px) {
-    #type,tr td:nth-child(3) {
-        display:none
+    .container {
+        padding-top: 20px;
+    }
+    #statusnow {
+        padding: 0;
+        height: 39px;
+    }
+    #name {
+        padding: 0;
+        height: 33px;
+    }
+    #type {
+        padding: 0;
+        height: 33px;
+    }
+    #location {
+        padding: 0;
+        height: 33px;
+    }
+    #uptime {
+        padding: 0;
+        height: 33px;
+    }
+    #cpu {
+        padding: 0;
+        height: 86px;
+    }
+    #ram {
+        padding: 0;
+        height: 86px;
+    }
+    #hdd {
+        padding: 0;
+        height: 86px;
+    }
+    #table {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 450px;
+    }
+    #table tbody {
+        width: 50%;
+        height: 100%;
+    }
+    #table thead {
+        width: 30%;
+        height: 100%;
+    }
+    #table tr {
+        display: grid;
+        justify-content: center;
+        justify-items: stretch;
     }
 }
 
 @media only screen and (max-width: 992px) {
     body,html {
         font-size:13px
-    }
-}
-
-@media only screen and (max-width: 910px) {
-    #location,tr td:nth-child(4) {
-        display:none
     }
 }
 
@@ -224,47 +198,10 @@ div.bar {
 
     #cards .card div.card-content p {
         font-size: 1.25rem;
-        margin-bottom: .6rem
     }
 
     #app #header {
         height: 20rem;
         background: url(./img/cover_mobile.e38df367.png) no-repeat 50%!important
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    #uptime,tr td:nth-child(5) {
-        display:none
-    }
-}
-
-@media only screen and (max-width: 660px) {
-    #load,tr td:nth-child(6) {
-        display:none
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #traffic,tr td:nth-child(8) {
-        display:none
-    }
-}
-
-@media only screen and (max-width: 533px) {
-    #name,tr td:nth-child(2) {
-        min-width:20px;
-        max-width: 60px;
-        text-overflow: ellipsis;
-        overflow: hidden
-    }
-
-    #hdd,tr td:nth-child(11) {
-        display: none
-    }
-
-    #cpu,#ram {
-        min-width: 20px;
-        max-width: 40px
     }
 }
